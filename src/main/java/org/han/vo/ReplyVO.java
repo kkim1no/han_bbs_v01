@@ -2,7 +2,7 @@ package org.han.vo;
 
 import java.util.Date;
 
-public class ReplyVO{
+public class ReplyVO {
 	
 	private Integer rno; 
 	private Integer bno; 
@@ -39,12 +39,12 @@ public class ReplyVO{
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	
 	@Override
 	public String toString() {
 		return "ReplyVO [rno=" + rno + ", bno=" + bno + ", userid=" + userid
 				+ ", cont=" + cont + ", regdate=" + regdate + "]";
-	}
+	} 
 	
 	
+
 }

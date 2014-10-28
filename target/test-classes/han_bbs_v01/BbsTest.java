@@ -1,6 +1,4 @@
-package org.han.web;
-
-import java.util.List;
+package han_bbs_v01;
 
 import javax.inject.Inject;
 
@@ -14,9 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/**/*-context.xml" })
-public class BbsServiceTest {
+public class BbsTest {
 	
-	static Logger logger = Logger.getLogger(BbsServiceTest.class);
+	static Logger logger = Logger.getLogger(BbsTest.class);
 	
 	@Inject
 	BbsVO vo;
@@ -31,29 +29,5 @@ public class BbsServiceTest {
 		vo.setUserid("han02");
 		service.bbsCreate(vo);
 	}
-	
-	@Test
-	public void readTest(){
-		vo = service.read("448");
-		logger.info(vo);
-	}
-	
-	@Test
-	public void updateTest(){
-		vo.setTitle("¿Ö!!!");
-		vo.setBno(451);
-		service.update(vo);
-	}
-	
-	@Test
-	public void deleteTest(){
-		service.delete("451");
-	}
-	
-	@Test
-	public void listTest(){
-		List<BbsVO> list = service.list("1");
-		logger.info(list);
-		
-	}
+
 }

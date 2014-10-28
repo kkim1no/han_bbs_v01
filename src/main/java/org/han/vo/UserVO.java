@@ -32,13 +32,11 @@ public class UserVO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	
 	@Override
 	public String toString() {
 		return "UserVO [userid=" + userid + ", userpw=" + userpw + ", email="
 				+ email + ", regdate=" + regdate + "]";
 	}
-	
 	
 	
 }

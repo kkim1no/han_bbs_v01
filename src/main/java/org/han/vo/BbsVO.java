@@ -4,9 +4,9 @@ import java.util.Date;
 
 import org.springframework.stereotype.Service;
 
-
-public class BbsVO {	
-
+@Service
+public class BbsVO {
+	
 	private Integer bno; 
 	private String title; 
 	private String userid; 
@@ -63,7 +63,6 @@ public class BbsVO {
 	public void setContfile(String contfile) {
 		this.contfile = contfile;
 	}
-	
 	@Override
 	public String toString() {
 		return "BbsVO [bno=" + bno + ", title=" + title + ", userid=" + userid
@@ -73,6 +72,5 @@ public class BbsVO {
 	}
 	
 	
-	
-	
+
 }

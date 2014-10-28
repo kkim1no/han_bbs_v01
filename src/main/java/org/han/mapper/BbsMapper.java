@@ -1,8 +1,5 @@
 package org.han.mapper;
 
-
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
@@ -12,13 +9,7 @@ import org.apache.ibatis.annotations.Update;
 import org.han.vo.BbsVO;
 
 public interface BbsMapper {
-
-	@Select("select * from tbl_bbs")
-	public String[] getList();
 	
-	
-	@Insert("insert into TBL_BBS values (seq_bbs.nextval, #{title}, #{userid}, #{cont}, sysdate, 0, 0,'')")
-	public void setData(BbsVO vo);
 	@Insert("insert into tbl_bbs (bno, title, userid, cont)"+
 			" values(seq_bbs.nextval, #{title}, #{userid}, #{cont})")
 	public void create(BbsVO vo);
@@ -32,7 +23,11 @@ public interface BbsMapper {
 	@Delete("delete from tbl_bbs where bno=#{bno}")
 	public void delete(String bno);
 	
-	@Select("select * from tbl_bbs where bno=#{bno} order by bno desc")
+	@Select("select bno," 
+			+" (case when sysdate - regdate < 1 then '\"new\"' end)||title||(case when rcount = 0 then ' ' when rcount>0 then '['||rcount||']' end) title,"
+			+"userid, regdate, vcount from"
+			+" (select /*+index_desc(tbl_bbs pk_bbs)*/ rownum rn, bno, title, userid, regdate, vcount, rcount from tbl_bbs where bno>0 and rownum<=(ceil(#{page}/10)*100)+1)"
+			+" where rn > (#{page}-1)*10 and rn<=(#{page}*10)")
 	public List<BbsVO> list(String page);
 	
 }
