@@ -19,7 +19,6 @@ public interface BbsMapper {
 	
 	@Insert("insert into TBL_BBS values (seq_bbs.nextval, #{title}, #{userid}, #{cont}, sysdate, 0, 0,'')")
 	public void setData(BbsVO vo);
-	
 	@Insert("insert into tbl_bbs (bno, title, userid, cont)"+
 			" values(seq_bbs.nextval, #{title}, #{userid}, #{cont})")
 	public void create(BbsVO vo);
