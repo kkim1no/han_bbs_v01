@@ -27,7 +27,7 @@ public class BbsTest {
 		vo.setTitle("¾ß!!");
 		vo.setCont("Èûµé¾î...");
 		vo.setUserid("han02");
-		service.Create(vo);
+		service.bbsCreate(vo);
 	}
 
 }
