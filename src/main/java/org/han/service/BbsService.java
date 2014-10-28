@@ -6,17 +6,11 @@ import org.han.mapper.BbsMapper;
 import org.han.vo.BbsVO;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a7b933850419c765e92cdf9883138f6190cf8635
 @Service
 public class BbsService {
 	
 	@Inject
 	BbsMapper mapper;
-	
-<<<<<<< HEAD
 	
 	public void Create(BbsVO vo){
 		
@@ -29,7 +23,6 @@ public class BbsService {
 	}
 
 	
-=======
 	@Inject
 	BbsVO vo;
 	
@@ -48,6 +41,5 @@ public class BbsService {
 	public void delete(String bno){
 		mapper.delete(bno);
 	}
->>>>>>> a7b933850419c765e92cdf9883138f6190cf8635
 
 }
