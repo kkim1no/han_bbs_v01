@@ -9,7 +9,6 @@
 </head>
 <body>
 	<h1>리스트좀 뜨라고</h1>
-
 	<ul>
 		<c:forEach items="${list}" var="list">
 			<li>${list}</li>

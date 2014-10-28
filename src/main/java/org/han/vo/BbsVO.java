@@ -15,6 +15,7 @@ public class BbsVO {
 	private Integer vcount; 
 	private Integer rcount; 
 	private String contfile;
+	
 	public Integer getBno() {
 		return bno;
 	}
