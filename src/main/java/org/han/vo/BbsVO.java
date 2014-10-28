@@ -2,8 +2,16 @@ package org.han.vo;
 
 import java.util.Date;
 
+<<<<<<< HEAD
 public class BbsVO {
 
+=======
+import org.springframework.stereotype.Service;
+
+@Service
+public class BbsVO {
+	
+>>>>>>> a7b933850419c765e92cdf9883138f6190cf8635
 	private Integer bno; 
 	private String title; 
 	private String userid; 
@@ -12,7 +20,10 @@ public class BbsVO {
 	private Integer vcount; 
 	private Integer rcount; 
 	private String contfile;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> a7b933850419c765e92cdf9883138f6190cf8635
 	public Integer getBno() {
 		return bno;
 	}
@@ -61,16 +72,26 @@ public class BbsVO {
 	public void setContfile(String contfile) {
 		this.contfile = contfile;
 	}
+<<<<<<< HEAD
 	
 	@Override
 	public String toString() {
 		return "Bbs_vo [bno=" + bno + ", title=" + title + ", userid=" + userid
+=======
+	@Override
+	public String toString() {
+		return "BbsVO [bno=" + bno + ", title=" + title + ", userid=" + userid
+>>>>>>> a7b933850419c765e92cdf9883138f6190cf8635
 				+ ", cont=" + cont + ", regdate=" + regdate + ", vcount="
 				+ vcount + ", rcount=" + rcount + ", contfile=" + contfile
 				+ "]";
 	}
 	
 	
+<<<<<<< HEAD
 	
 	
+=======
+
+>>>>>>> a7b933850419c765e92cdf9883138f6190cf8635
 }

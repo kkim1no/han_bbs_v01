@@ -32,6 +32,7 @@ public class UserVO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
+<<<<<<< HEAD
 	
 	
 	@Override
@@ -39,6 +40,13 @@ public class UserVO {
 		return "User_vo [userid=" + userid + ", userpw=" + userpw + ", email="
 				+ email + ", regdate=" + regdate + "]";
 	} 
+=======
+	@Override
+	public String toString() {
+		return "UserVO [userid=" + userid + ", userpw=" + userpw + ", email="
+				+ email + ", regdate=" + regdate + "]";
+	}
+>>>>>>> a7b933850419c765e92cdf9883138f6190cf8635
 	
 	
 }
