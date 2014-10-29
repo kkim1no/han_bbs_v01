@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head lang="en">
-<meta charset="UTF-8">
-<title></title>
+<title>한잔해 게시판</title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
                         <div class="col-xs-12">
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">Responsive Hover Table</h3>
+                                    <h3 class="box-title">자유 게시판</h3>
                                     <div class="box-tools">
                                         <div class="input-group">
                                             <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search">
@@ -35,7 +35,7 @@
 
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js">
-		//jquery�� ����ϰڴٰ� �����ϴ� ��.
+		//jquery를 사용하겠다고 선언하는 것.
 	</script>
 
 	<script>

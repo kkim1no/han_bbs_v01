@@ -40,10 +40,10 @@ public class BbsController {
 		return service.list(page);
 	}
 
-	@RequestMapping(value = "/View", method = RequestMethod.GET)
+	@RequestMapping(value = "/view", method = RequestMethod.GET)
 	public String list() {
 
-		return "bbs/View";
+		return "bbs/view"; 
 	}
 	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)

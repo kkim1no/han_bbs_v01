@@ -14,7 +14,7 @@ public interface BbsMapper {
 			" values(seq_bbs.nextval, #{title}, #{userid}, #{cont})")
 	public void create(BbsVO vo);
 	
-	@Select("select * from tbl_bbs where bno=#{bno} order by bno desc")
+	@Select("select * from tbl_bbs where bno=#{bno}")
 	public BbsVO read(String bno);
 
 	@Update("update tbl_bbs set title=#{title} where bno=#{bno}")
