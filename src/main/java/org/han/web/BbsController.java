@@ -17,34 +17,47 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/bbs/*")
 public class BbsController {
-	
+
 	@Inject
 	BbsService service;
-	
+
 	private static Logger logger = LoggerFactory.getLogger(BbsController.class);
-	
-//	@RequestMapping("/list")
-//	public String list(@RequestParam(value="page", defaultValue="") String page, Model model){
-//		
-//		model.addAttribute("list" , service.list(page));
-//		
-//		return "bbs/list";
-//		
-//	}
+
+	// @RequestMapping("/list")
+	// public String list(@RequestParam(value="page", defaultValue="") String
+	// page, Model model){
+	//
+	// model.addAttribute("list" , service.list(page));
+	//
+	// return "bbs/list";
+	//
+	// }
 
 	@RequestMapping("/list")
-	public @ResponseBody List<BbsVO> list(@RequestParam(value="page", defaultValue="1") String page){
-				
+	public @ResponseBody List<BbsVO> list(
+			@RequestParam(value = "page", defaultValue = "1") String page) {
+
 		return service.list(page);
 	}
-	
-	
-	@RequestMapping(value ="/View", method = RequestMethod.GET)
-	public String list(){
-		
-				
+
+	@RequestMapping(value = "/View", method = RequestMethod.GET)
+	public String list() {
+
 		return "bbs/View";
-		
 	}
- 
+	
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String main() {
+
+		return "bbs/main";
+	}
+	
+	
+	@RequestMapping("/read")
+	public @ResponseBody BbsVO read(
+			@RequestParam(value = "bno", defaultValue = "1") String page) {
+
+		return service.read(page);
+	}
+
 }
